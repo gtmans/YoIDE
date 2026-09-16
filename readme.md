@@ -4,7 +4,7 @@
 
 Uses Arduino IDE v2.x and specific CYD boards. Test your board before trying YOIDEGIT scripts!
 (put #define USE24 for the 2.4 inch board or //#define USE24 for the 2.8 inch in tftkeuze.h) 
-The main challenche for this project was memory because the boards do not have PSRAM. 
+The main challenge for this project was memory because the boards do not have PSRAM. 
 Scrolling text together with wifi streaming is almost impossible. For that reason I use a sort of typewriter wipe.
 For fun I used digifont but that is quite difficult to read, so you can also use a normal font. 
 All main actions are in display.h and display.cpp. Most display options in display_layout.h 
