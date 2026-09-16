@@ -1,4 +1,6 @@
-YOIDE Yoradio clone for Arduino IDE and LovyanGFX for CYD clone 2.8inch ESP32 2432S028 ST7789 or 2.4 inch DIYTZT ESP32024 ILI9342
+<H1>YOIDE Yoradio clone for Arduino IDE and LovyanGFX</H1> <BR>for CYD clone 2.8inch ESP32 2432S028 ST7789 or 2.4 inch DIYTZT ESP32024 ILI9342
+
+<img src="https://github.com/gtmans/YoIDE/blob/main/images/YOIDEGIT-front.png" width="450">
 
 Uses Arduino IDE v2.x and specific CYD boards. Test your board before trying YOIDEGIT scripts!
 (put #define USE24 for the 2.4 inch board or //#define USE24 for the 2.8 inch in tftkeuze.h) 
@@ -6,6 +8,8 @@ The main challenche for this project was memory because the boards do not have P
 Scrolling text together with wifi streaming is almost impossible. For that reason I use a sort of typewriter wipe.
 For fun I used digifont but that is quite difficult to read, so you can also use a normal font. 
 All main actions are in display.h and display.cpp. Most display options in display_layout.h 
+
+<img src="https://github.com/gtmans/YoIDE/blob/main/images/YOIDEGIT-back.png" width="450">
 
 ```text
 test your board first: https://github.com/gtmans/CYD/blob/main/DIYTZT_ESP32-024_ILI9342/CYD_TEST_ESP32-024.ino or https://github.com/gtmans/CYD/blob/main/AOKIN_ESP32-2432S028/CYD_TEST_ESP32-2432S028.ino
