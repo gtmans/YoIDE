@@ -48,12 +48,6 @@ private:
     static void digiRect    (int x, int y, int w, int h, int c);
 
     // ===== Typewriter =====
-//  static char visible[256];     // wat er nu op het scherm staat
-//  static int  visLen = 0;       // lengte van zichtbare tekst
-//  static int  cursorX = TITLE_X;
-  //char visible[256];     // wat er nu op het scherm staat
-  //int  visLen=0;           // lengte van zichtbare tekst
-  //int  cursorX= 8;
   int titleXPos = 8;//TITLE_X;
   int titleSrcIndex = 0;
 
@@ -63,9 +57,7 @@ private:
     char     logo[64]         = "";
     char  station[64]         = "";
     char    title[128]        = "";
-  //char alttitle[128]        = "Nu even tijd voor heeeeel iets anders want voor je het weet is de tijd voorbij";
     char alttitle[128]        = "";
-  //char extendedTitle[130];
     char   oldDate[10]        = "";
     bool     newtitle         = false;
     uint16_t titleOffset      = 0;
