@@ -1,0 +1,10 @@
+NPO Radio 1;http://icecast.omroep.nl/radio1-bb-mp3;/logos/npo1.raw
+NPO Radio 2;http://icecast.omroep.nl/radio2-bb-mp3;/logos/npo2.raw
+NPO Radio 4;http://icecast.omroep.nl/radio4-bb-mp3;/logos/npo4.raw
+NPO Radio 5;http://icecast.omroep.nl/radio5-bb-mp3;/logos/npo5.raw
+Qmusic;http://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live_96.mp3;/logos/qmusic.raw
+538;http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3;/logos/538.raw
+538 NS;http://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR09.mp3;/logos/538ns.raw
+Veronica;http://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3;/logos/veronica.raw
+Sky Radio;http://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3;/logos/sky.raw
+Radio 10;http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3;/logos/radio10.raw
