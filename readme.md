@@ -2,7 +2,7 @@
 
 <img src="https://github.com/gtmans/YoIDE/blob/main/images/YOIDEGIT-front.png" width="450">
 
-Uses Arduino IDE v2.x and specific CYD boards. Test your board before trying YOIDEGIT scripts!
+Uses Arduino IDE v2.x and specific CYD boards. Test your board before trying YOIDE scripts!
 (put #define USE24 for the 2.4 inch board or //#define USE24 for the 2.8 inch in tftkeuze.h) 
 The main challenge for this project was memory because the boards do not have PSRAM. 
 Scrolling text together with wifi streaming is almost impossible. For that reason I use a sort of typewriter wipe.
