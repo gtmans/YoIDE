@@ -194,7 +194,6 @@ void RadioDisplay::       setPlaying(bool p) {
 void RadioDisplay::       setStation(const char* txt) {
   strncpy(station,txt,sizeof(station)-1);
   station[sizeof(station) - 1] = 0;
-  //dirtyStation        = true;
 }
 void RadioDisplay::       setTitle(const char* txt){
   strncpy                 (title, txt, sizeof(title) - 1);
@@ -319,8 +318,6 @@ void RadioDisplay::drawLogo() {
     dirtyStation =      true;// of tft.print logo/station
     return;
   }
-//Serial.print          ("RAW logo laden: ");
-//Serial.println        (logo);
   uint16_t line[LOGO_W];
   int y               = LOGO_Y;
   while (file.available() && y < LOGO_Y + LOGO_H) {
@@ -358,7 +355,6 @@ void RadioDisplay::       drawDigiTitle(const char* fullText){
     tft->fillRect         (titleXPos, TITLE_Y, charwdt*2, maxhgt, BG_COLOR);
 
     // 5. Print karakter op huidige titleXPos
-  //if                    (c=='i'||c=='I'||c=='1') {titleXPos-=charwdt/2};
     drawDigiLetter2       (c,titleXPos,TITLE_Y);
     // m=nn
     if                    (c=='m'||c=='M'||c=='w'||c=='W'){titleXPos+=charwdt;drawDigiLetter2(c,titleXPos,TITLE_Y);}
@@ -374,15 +370,11 @@ void RadioDisplay::       drawDigiTitle(const char* fullText){
     titleXPos += charwdt;
 
     // 8. Als buiten titelvak → terug naar begin en wis naar rechts
-    // if (titleXPos>300){titleXPos=8;}
-  //if                   (titleXPos + charwdt*2 >= TITLE_X + TITLE_W) {
     if                   (titleXPos + charwdt   >= TITLE_X + TITLE_W) {
         tft->fillRect    (titleXPos, TITLE_Y, 320-titleXPos, TITLE_H, BG_COLOR);
         titleXPos          = TITLE_X;
     }
-  
-//Serial.print        ("index="+String(titleSrcIndex)+" xpos="+String(titleXPos)+" char=");
-//Serial.println      (c);
+
   if (newtitle) {
     Serial.print(" TYPE-TITLE DRAWINGTIME:");
     Serial.print(micros() - drawingtime);
@@ -484,17 +476,13 @@ void RadioDisplay::drawTitle(const char* text)
   }
     titleSprite->pushSprite   (TITLE_X, TITLE_Y);
 #else //NO SPRITES
-//#define FILLALL
-//if (!titleSprite)           {return;}
   #ifdef USEFONT
-//tft->setFont                (FONT_MEDIUM);tft->setTextSize(DEFTXTSIZE);
   tft->setFont                (FONT_SMALL); tft->setTextSize(2);
   #endif
   tft->setTextWrap            (false);
   int textWidth             = tft->textWidth(text);
   bool scrolling            = (textWidth > TITLE_W);
   #ifdef FILLALL
-  //tft->fillRect             (TITLE_X, TITLE_Y, TITLE_W, TITLE_H, BG_COLOR);
     tft->fillRect             (TITLE_X-8, TITLE_Y, TITLE_W+16, TITLE_H, BG_COLOR);
   #else
   // oude tekst wissen ALTERNATIEF
@@ -751,7 +739,6 @@ void RadioDisplay::   drawPlay() {
   clearArea           (STATUS_X,STATUS_Y,30,STATUS_H);
   int x   =           STATUS_X + 4;
   int y   =           STATUS_Y + 3;
-//int h=14,b=7;
   int h=16,b=8;
   if (playing)        {
     // driehoek PLAY
@@ -827,21 +814,9 @@ if (t1 + t2 > 50) {
       if (newBuffer != buffer) {
         buffer       = newBuffer;
         dirtyBuffer  = true;
-      //Serial.printf  ("BUF %lu/%lu  HEAP %u\n", filled, size, ESP.getFreeHeap());
         if (filled<10000){
-      //Serial.printf  ("BUF %lu/%lu  HEAP %u internalLargest=%u\n", filled, size, ESP.getFreeHeap(),heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL));
-      // Serial.printf  ("BUF %lu/%lu  HEAP %u CALLS: size=%lu us filled=%lu us\n", filled, size, t1, t2);
         Serial.println ("BUF "+String(filled)+"/"+String(size)+" inBufferSize:"+String(t1)+" inBufferFilled:"+String(t2)+"us.");
         }
-/*  Serial.printf  ("BUF free=%u max=%u largest=%u internal=%u internalLargest=%u\n",
-    txt,
-    ESP.getFreeHeap(),
-    ESP.getMaxAllocHeap(),
-    heap_caps_get_largest_free_block(MALLOC_CAP_8BIT),
-    heap_caps_get_free_size(MALLOC_CAP_INTERNAL),
-    heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL)
-  );
-*/
       }
     }
   #endif
