@@ -1,4 +1,5 @@
 /*
+/ Created 2026 by github.com/gtmans/ free for use and development
 / Yoradio clone for Arduino IDE and LovyanGFX for CYD clone 
 / 2.8inch ESP32 2432S028 ST7789 or 2.4 inch DIYTZT ESP32024 ILI9342
 / uses optional SD for stations.txt and station logo's
