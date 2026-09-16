@@ -7,9 +7,9 @@ Scrolling text together with wifi streaming is almost impossible. For that reaso
 For fun I used digifont but that is quite difficult to read, so you can also use a normal font. 
 All main actions are in display.h and display.cpp. Most display options in display_layout.h 
 
-YoRadioIDE LovyanGFX CYD github/gtmans
-for ESP32 DIYTZT_ESP32_024_ILI9342.h or ESP32 AOKIN_2432S028_ST7789.h and MAX98357A see below for connections
+```text
 test your board first: https://github.com/gtmans/CYD/blob/main/DIYTZT_ESP32-024_ILI9342/CYD_TEST_ESP32-024.ino or https://github.com/gtmans/CYD/blob/main/AOKIN_ESP32-2432S028/CYD_TEST_ESP32-2432S028.ino
+```
 Compile with Arduino IDE choose board ESP32 DEV module if Too Big: use tools/partition scheme: 3mb huge APP
 install ESP32 3.3.11 (not V4!) and LovyanGFX 1.2.26 
 install ESP32-audioI2S-master max. 3.2.1 when no PSRAM!
@@ -19,6 +19,7 @@ non default options
 #define TYPEWRITE  (in display.cpp) this is default use letter for letter i/o scrolling tekst (scrolling text can be less pretty)
 #define TYPELETTER (in display.cpp) uses normal characters in titles i/o digifont
 
+```text
 hardware configurations:
 ESP32 + ILI9342 + XPT2046 + MAX98357A or
 ESP32 + ILI9342 + XPT2046 + PCM5102MK 2.0 + GF1002/GS27076 + XLY-D43 3 W / 4 Ω x2
@@ -74,7 +75,6 @@ pinout      ESP-WROOM-32
 14 GPIO12                         25 GPIO0
    15 16 17 18 19 20 21 22 23 24
 
-
 CYD 2.4" ESP32-024
 jst4 linkerzijde boven USBC
 5V
@@ -101,3 +101,4 @@ GND
 GPIO35
 GPIO22
 GPIO21
+```
