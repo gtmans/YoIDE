@@ -8,6 +8,9 @@ The main challenche for this project was memory because the boards do not have P
 Scrolling text together with wifi streaming is almost impossible. For that reason I use a sort of typewriter wipe.
 For fun I used digifont but that is quite difficult to read, so you can also use a normal font. 
 All main actions are in display.h and display.cpp. Most display options in display_layout.h 
+Optional station logo's in .raw format can be used from SD. A python script is provided to convert your logo's from .jpg to .raw.
+Station data can be read from stations.txt on SD.
+3D files can be shared free here on request.
 
 <img src="https://github.com/gtmans/YoIDE/blob/main/images/YOIDEGIT-back.png" width="450">
 
