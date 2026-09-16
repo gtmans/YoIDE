@@ -1,5 +1,4 @@
 //https://nl.aliexpress.com/item/1005007524304778.html 2.8inch
-//https://randomnerdtutorials.com/esp32-cheap-yellow-display-cyd-pinout-esp32-2432s028r/
 /*ESP32 touchscreen 2,8 inch TFT LCD-scherm ESP-WROOM-32 st7789 resistieve aanraakmodule 240 * 320 ESP32-2432S028R Bluetooth WIFI*/
 /*
 CYD clone 2.8inch
